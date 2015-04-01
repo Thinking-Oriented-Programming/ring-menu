@@ -1,0 +1,61 @@
+@import bourbon
+@import ../base
+
+// 这里默认的样式是为bubble准备的，以便实现bubble动画。
+#info-bar 
+  // 相对at-plus-button定位
+  +position(absolute, 2rem null null 2rem)
+  width: 0rem
+  height: 0rem
+  color: white
+  background-color: rgba(68, 68, 68, 0.68)
+  font-size: 100%
+  text-align: center
+  overflow: hidden
+  +make-circle()
+  +transition(all 0.5s linear)
+  ul
+    margin: 7% 0
+    padding: 0
+  li
+    list-style: none
+    display: list-item
+    margin-right: 0
+    img
+      margin-right: 0.5rem
+      vertical-align: middle
+
+  li.mine
+    color: lighten($light-green-color, 15%)
+    display: inline
+
+  li.page
+    font-size: 100%
+    margin-top: 16%
+    margin-bottom: 6%
+    img
+      +size(20% 20%)
+      margin-right: 8%
+
+  li.mine.like
+    margin-left: 5%
+  
+#button:hover
+  #info-bar
+    top: -8rem
+    left: -2rem
+    width: 8rem
+    height: 8rem
+    opacity: 1
+    
+    &.enabled
+      background-color: $indigo-700-blue-color
+
+    
+    &.disabled
+      background-color: rgba(68, 68, 68, 0.68)
+
+
+
+
+

@@ -1,0 +1,38 @@
+@import bourbon
+
+$image-root: "assets/images"
+
+$mask-black: rgba(0, 0, 0, 0.54)
+
+$light-grey-font-color: #999
+$light-blue-font-color: #379BE9
+$content-font-color: #2A2A2A
+$light-blue-new-comment-indicator-color: #60B3F4
+$light-white-font-color: #DCDCDC
+$more-light-white-font-color: #F2F2F2
+$dark-green-background-color: #013F06
+$indigo-700-blue-color: rgba(48, 63, 159, 1)
+$indigo-700-blue-color-transparent: rgba(48, 63, 159, 0)
+
+$very-dark-blue-color: #b3b3b3
+$dark-blue-color: #2a3b54
+$light-green-color: #079E6E
+$tinge-dark-blue-color: #587A69
+$very-light-green-color: #00c09b
+$yellow-green-color: #B6AF09
+
+$red-warn-background-color: #FF3A3A
+
+= make-circle()
+  border-radius: 50%
+
+= green-font()
+  color: $very-light-green-color
+  margin: 0.25rem
+
+
++keyframes(rotate)
+  from
+    +transform(rotate(0deg))
+  to
+    +transform(rotate(360deg))

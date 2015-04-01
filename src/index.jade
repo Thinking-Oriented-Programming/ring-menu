@@ -1,0 +1,20 @@
+//- at-plus-page @+应用是Single Page Application，这就是它的舞台。
+doctype html
+html
+  head
+    title Lab 4 Async JavaScript
+    meta(charset='utf-8')
+    - var csshref = pkg.name + '-' + pkg.version + '.css'
+    link(rel='stylesheet', href='#{csshref}')
+    link(rel="icon" sizes="196x196" href="assets/images/favicon.png")
+    script(src='jquery.min.js')
+    //- script(src='index.js')
+
+    //- 调试时所用样式。
+    if debug
+        link(rel='stylesheet', href='debug.css') 
+  body
+    #at-plus-container
+      //- bottom-positioner用以将内容定位到底部
+      #bottom-positioner
+        include at-plus-button/button.jade

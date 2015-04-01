@@ -1,0 +1,33 @@
+{
+  "author": "王青",
+  "name": "SE-386-Lab-04",
+  "version": "0.0.1",
+  "licenses": {
+    "type": "MIT"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thinking-Oriented-Programming/ring-menu.git"
+  },
+  "dependencies": {
+    "express": "^4.10.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-bump": "0.0.6",
+    "grunt-contrib-clean": "^0.4.1",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.4.1",
+    "grunt-contrib-jade": "~0.12.0",
+    "grunt-express": "1.4.0",
+    "grunt-contrib-watch": "^0.4.4",
+    "grunt-conventional-changelog": "^0.1.2",
+    "grunt-livescript": "~0.5.0",
+    "grunt-newer": "^0.7.0",
+    "grunt-sass": "^0.14.0",
+    "grunt-shell": "^0.7.0",
+    "load-grunt-configs": "^0.4.0",
+    "load-grunt-tasks": "^0.6.0",
+    "node-bourbon": "^1.2.3"
+  }
+}

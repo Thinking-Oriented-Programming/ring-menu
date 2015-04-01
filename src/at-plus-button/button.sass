@@ -1,0 +1,33 @@
+@import bourbon
+@import ../base
+
+#button
+  z-index: 100000
+  +position(absolute, null null 3.45rem 15rem)
+  +size(4rem 4rem)
+  +transition(all 0.5s ease-in-out) 
+
+  .apb
+    +position(absolute, 0)
+    margin: auto
+    background: transparent
+    +size(50px 50px)
+    +transition(all 0.5s ease-in-out, background-color 0 0.5s) 
+    background-color: $indigo-700-blue-color
+    +make-circle()
+  
+  .icon
+    +size(35px 25px)
+    +position(absolute, 0.7rem null null 0.5rem)
+    background-image: url("#{$image-root}/atplus_green.png")
+    background-size: 35px 25px
+    background-repeat: no-repeat
+
+#button:not(:hover)
+  .apb
+    +transform(scale(0.5))
+    opacity: 0.5
+  .icon
+    +transform(scale(1.2)) /* 适当放大一些icon，提高识认性 */
+    left: 0.6rem
+    background-image: url("#{$image-root}/atplus_white.png")

@@ -1,0 +1,83 @@
+@import bourbon
+@import ../base
+
+#control-ring-container
+  width: 10rem
+  height: 10rem
+  +make-circle()
+  // 相对at-plus-button定位
+  +position(absolute, -3rem null null -3.5rem)
+  padding: 0
+
+  ul
+    // border: 1px green solid
+    padding: 0.5rem 0 0 0
+    margin: 0
+    li.button
+      position: relative
+      list-style: none
+      display: block
+      opacity:0
+      +size(2rem 2rem)
+      +make-circle()
+      text-align: center
+      background-size: 16px 16px
+      background-position: center
+      background-repeat: no-repeat
+      margin-left: 4rem
+      margin-top: -2rem
+      // z-index: -1
+      +transition(all 0.5s ease-in-out)
+      span.title
+        +position(absolute, 10px 10px null null)
+        color: white
+      span.unread
+        display: block
+        opacity: 1
+        +size(1.2rem 1.1rem)
+        +position(relative, -0.25rem null null 1.3rem)
+        font-size: 0.8rem
+        color: $light-white-font-color
+        padding-top: 0.1rem
+        vertical-align: bottom
+        +make-circle()
+        background-color: $red-warn-background-color
+
+      &:nth-child(1)
+        margin-top: 3.4rem
+      // &:hover, &.on
+      //   background-color: $indigo-700-blue-color !important
+      &.on:nth-child(1)
+        background-image: url('#{$image-root}/mask.png') !important
+
+#button:hover
+  #control-ring-container
+    li.button
+      background-color: rgba(68, 68, 68, 0.8)
+      opacity: 1
+      &:nth-child(1)
+        margin-top: 1.4rem
+        margin-left: 0.6rem
+      &:nth-child(2)
+        margin-top: 0.3rem
+        margin-left: 0
+      &:nth-child(3)
+        margin-left: 0.9rem
+        margin-top: 0.3rem
+      &:nth-child(4)
+        margin-left: 2.95rem
+        margin-top: -0.65rem
+      &:nth-child(5)
+        margin-left: 5.6rem
+        margin-top: -2.2rem
+
+      &.enabled, &.waiting
+        background-color: $indigo-700-blue-color
+
+      &.waiting span.unread:before
+        content: '...'
+
+      &.disabled, &.done
+        background-color: rgba(68, 68, 68, 0.8)
+
+
